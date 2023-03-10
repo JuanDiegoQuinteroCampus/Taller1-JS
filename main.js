@@ -1,14 +1,18 @@
-/* 4. Construir el algoritmo que solicite el nombre y edad de 3personas y determine el nombre de la persona con mayor edad. */
-let nombre1= prompt("Dijite el nombre de la primera persona")
-let edad1= prompt("Dijite la edad de la primera persona")
-let nombre2= prompt("Dijite el nombre de la segunda persona")
-let edad2= prompt("Dijite la edad de la segunda persona")
-let nombre3= prompt("Dijite el nombre de la tercera persona")
-let edad3= prompt("Dijite la edad de la tercera persona")
-console.log("la edad mayor es de",Math.max(edad1, edad2, edad3), "años");
-if(edad1 > edad2 && edad1 > edad3)
-{console.log(nombre1+" es la persona con mas edad")}
-else if(edad2 > edad1 && edad2 > edad3)
-{console.log(nombre2+" es la persona con mas edad")}
-else if(edad3 > edad1 && edad3 > edad2)
-{console.log(nombre3+" es la persona con mas edad")}
+/* 5. Construir el algoritmo que lea por teclado dos números,
+si el primero es mayor al segundo informar su suma y
+diferencia, en caso contrario, informar el producto y la
+división del primero respecto al segundo. */
+
+let num1 = prompt("Dijite un número");
+let num2 = prompt("Dijite otro número adicional");
+
+Suma = parseFloat(num1) + parseFloat(num2)
+Resta= parseFloat(num1) - parseFloat(num2)
+Producto = parseFloat(num1) * parseFloat(num2)
+División = parseFloat(num1) / parseFloat(num2)
+
+if (num1 > num2)
+{console.log("la suma de estos dos numeros es: " + Suma,". " + "Y la resta de estos dos números es: " + Resta);}
+
+else if(num1 < num2)
+{console.log("El producto de estos dos numeros es: " + Producto,". " + "Y la división de estos dos números es: " + División);}
