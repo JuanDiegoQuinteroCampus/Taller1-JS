@@ -1,19 +1,13 @@
-/* 7. Programa que pida el ingreso del nombre y precio de un artículo y la
-cantidad que lleva el cliente. Mostrar lo que debe pagar el comprador
-en su factura. */
-let nombrea=[];
-let precio=0;
-let cantidad=0;
+/* 8. Programa que Ingrese por teclado:
+a. el valor del lado de un cuadrado para mostrar por pantalla el
+perímetro del mismo
+b. la base y la altura de un rectángulo para mostrar el área del
+mismo */
+let lcuadrado = prompt("Dijite el valor de los lados del cuadrado")
+let base=prompt("Dijite la base de un rectangulo")
+let altura=prompt("Dijite la altura de un rectangulo")
 
-let cont =Number (prompt("cuantos articulos desea comprar?"));
-for (let i = 0;i < cont; i++){
-    nombrea = (prompt(`${i+1} ingrese el nombre del articulo `))
-    let valor = parseFloat(prompt(`${i+1} ingrese el precio del articulo `))
+perimetro = lcuadrado*4
+console.log(perimetro+" es el perimetro del cuadrado");
+console.log(base*altura+" Es el valor del area del rectangulo");
 
-    
-    cantidad++
-    precio += valor
-
-        
-    }
-    console.log("Debe pagar "+ precio+ " por " + cantidad+ " de articulos");
