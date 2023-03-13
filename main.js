@@ -1,18 +1,38 @@
-/* 5. Construir el algoritmo que lea por teclado dos números,
-si el primero es mayor al segundo informar su suma y
-diferencia, en caso contrario, informar el producto y la
-división del primero respecto al segundo. */
+/* 6. Construir el algoritmo en Javascript para un programa
+para cualquier cantidad de estudiantes que lea el nombre,
+el sexo y la nota definitiva y halle al estudiante con la mayor
+nota y al estudiante con la menor nota y cuantos eran
+hombres y cuantos mujeres. */
 
-let num1 = prompt("Dijite un número");
-let num2 = prompt("Dijite otro número adicional");
+let nombre=[];
+let nombreM=[];
+let nombrem=[];
+let nota=0;
+let notai=99999;
+let notaM=0;
+let sexo = [];
+let sexoF=0;
+let sexoM=0;
+let cont =Number (prompt("cuantos datos desea ingresa?"));
+for (let i = 0;i < cont; i++){
+    nombre = (prompt(`${i+1} ingrese el nombre del estudiante `))
+    nota=parseInt(prompt(`${i+1} ingrese la nota definitiva `))
+    if(nota>notaM){
+    notaM=nota
+    nombreM=nombre
+        }
+    if(nota<notai){
+    notai=nota
+    nombrem=nombre
+        }
+    sexo = (prompt(`${i+1} ingrese el sexo de la persona (M-F, recuerde en mayuscula)`))
+    if(sexo=="F")
+        {sexoF += 1}
+    else if(sexo=="M")
+        {sexoM += 1}
+}
+console.log("El estudiante que tuvo la mayor nota fue "+ nombreM + " con una nota de " + notaM);
+console.log("El estudiante que tuvo la menor nota fue "+ nombrem + " con una nota de " + notai);
+console.log(sexoF + " Eran Mujeres ");
+console.log(sexoM + " Eran Hombres macho pecho pelaos");
 
-Suma = parseFloat(num1) + parseFloat(num2)
-Resta= parseFloat(num1) - parseFloat(num2)
-Producto = parseFloat(num1) * parseFloat(num2)
-División = parseFloat(num1) / parseFloat(num2)
-
-if (num1 > num2)
-{console.log("la suma de estos dos numeros es: " + Suma,". " + "Y la resta de estos dos números es: " + Resta);}
-
-else if(num1 < num2)
-{console.log("El producto de estos dos numeros es: " + Producto,". " + "Y la división de estos dos números es: " + División);}
